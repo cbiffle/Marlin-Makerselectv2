@@ -622,13 +622,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  25.34,  25.34 }
-    #define DEFAULT_Ki_LIST {   2.38,   2.38 }
-    #define DEFAULT_Kd_LIST {  67.46,  67.46 }
+    #define DEFAULT_Kp_LIST {  21.40,  21.40 }
+    #define DEFAULT_Ki_LIST {   1.01,   1.01 }
+    #define DEFAULT_Kd_LIST { 113.49, 113.49 }
   #else
-    #define DEFAULT_Kp  25.34
-    #define DEFAULT_Ki   2.38
-    #define DEFAULT_Kd  67.46
+    #define DEFAULT_Kp  21.40
+    #define DEFAULT_Ki   1.01
+    #define DEFAULT_Kd  113.49
   #endif
 #endif
 
@@ -708,9 +708,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   // Wanhao Duplicator i3
-  #define  DEFAULT_bedKp 602.82
-  #define  DEFAULT_bedKi 114.98
-  #define  DEFAULT_bedKd 790.15
+  #define DEFAULT_bedKp 65.74
+  #define DEFAULT_bedKi 2.67
+  #define DEFAULT_bedKd 1077.04
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
