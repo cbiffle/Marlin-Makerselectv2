@@ -1354,7 +1354,7 @@
   //#define LCD_DECIMAL_SMALL_XY
 
   // Add an 'M73' G-code to set the current percentage
-  //#define LCD_SET_PROGRESS_MANUALLY
+  #define LCD_SET_PROGRESS_MANUALLY
 
   // Show the E position (filament used) during printing
   //#define LCD_SHOW_E_TOTAL
@@ -1390,10 +1390,10 @@
 // LCD Print Progress options
 #if EITHER(SDSUPPORT, LCD_SET_PROGRESS_MANUALLY)
   #if CAN_SHOW_REMAINING_TIME
-    //#define SHOW_REMAINING_TIME         // Display estimated time to completion
+    #define SHOW_REMAINING_TIME         // Display estimated time to completion
     #if ENABLED(SHOW_REMAINING_TIME)
-      //#define USE_M73_REMAINING_TIME    // Use remaining time from M73 command instead of estimation
-      //#define ROTATE_PROGRESS_DISPLAY   // Display (P)rogress, (E)lapsed, and (R)emaining time
+      #define USE_M73_REMAINING_TIME    // Use remaining time from M73 command instead of estimation
+      #define ROTATE_PROGRESS_DISPLAY   // Display (P)rogress, (E)lapsed, and (R)emaining time
     #endif
   #endif
 
@@ -1452,7 +1452,7 @@
 
   //#define MEDIA_MENU_AT_TOP               // Force the media menu to be listed on the top of the main menu
 
-  #define EVENT_GCODE_SD_ABORT "G28XY"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
+  #define EVENT_GCODE_SD_ABORT "M84"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
 
   #if ENABLED(PRINTER_EVENT_LEDS)
     #define PE_LEDS_COMPLETED_TIME  (30*60) // (seconds) Time to keep the LED "done" color before restoring normal illumination
