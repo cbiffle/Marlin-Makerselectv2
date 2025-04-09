@@ -16,3 +16,18 @@ printer.
 
 I haven't gotten the 2.1.x branch to fit. You might be able to pull it off if
 you remove BLTouch support.
+
+## Building
+
+You will need `platformio`. I can't figure out how to enable the appropriate
+optimizations in the Arduino IDE.
+
+With `platformio` installed, the key is:
+
+```
+platformio run -e sanguino1284p_optimized
+```
+
+...where the `_optimized` bit selects an alternate version of the Sanguino
+environment with more aggressive compiler optimizations. (I didn't create this,
+it was there all along.)
